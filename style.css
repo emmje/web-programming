@@ -1,0 +1,100 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #fce4ec; /* Very light pink background */
+}
+
+/* Heading styles */
+h1, h2, h3, h4 {
+    color: #e91e63; /* Bright pink - your main color */
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 15px;
+    color: #616161; /* Darker gray for contrast */
+}
+
+/* Link styles */
+a {
+    color: #ec407a; /* Slightly darker pink */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d81b60; /* Even darker pink on hover */
+    text-decoration: underline;
+}
+
+/* Unordered list styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+li::before {
+    content: "♥";
+    color: #f50057; /* A brighter, more intense pink heart */
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #f48fb1; /* Light pink border */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffebee; /* Very light rose/pink background for headers */
+    font-weight: bold;
+    color: #e91e63; /* Bright pink header text */
+}
+
+/* Image styles */
+img {
+    display: block;
+    margin: 0 auto 50px;
+    border-radius: 60%;
+    border: 4px solid #ec407a; /* Slightly darker pink border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Video styles */
+video {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal rule styles */
+hr {
+    border: none;
+    border-top: 2px dashed #ec407a; /* Slightly darker pink dashed line */
+    margin: 30px 0;
+}
