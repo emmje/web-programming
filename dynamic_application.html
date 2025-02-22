@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color:violet;
+        }
+        #errorMessage {
+            color: red;
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Application</title>
+</head>
+<body>
+    <button onclick="alert('Hello World Nicole Johnson')">Click me</button>
+    <p id="text">This is the first HTML, CSS, and JavaScript fusion</p>
+    
+    <button onclick="
+        this.textContent = (this.textContent === 'Change Text') ? 'Previous Text' : 'Change Text';
+        document.getElementById('text').textContent = (document.getElementById('text').textContent === 'This is the first HTML, CSS, and JavaScript fusion') ? 
+        'I am testing inline JavaScript' : 'This is the first HTML, CSS, and JavaScript fusion';
+    ">Change Text</button>
+    
+    <button id="click">Internal JavaScript Click</button>
+    
+    <button onclick="this.style.backgroundColor = 'mediumpurple'">Click me</button>
+    
+    <br><br>
+    <input type="color" id="colorPicker">
+    <input type="text" id="colorInput" placeholder="Enter a color (e.g grey, #ff5733)">
+    <button onclick="changeBackgroundColor()">Change Background</button>
+    <p id="errorMessage">Please enter a valid color name or hex code.</p>
+    
+    <script>
+        document.getElementById('click').onclick = function() {
+            alert('Button was clicked.');
+        };
+        
+        function isValidColor(color) {
+            let s = new Option().style;
+            s.color = color;
+            return s.color !== '';
+        }
+        
+        function changeBackgroundColor() {
+            let colorText = document.getElementById('colorInput').value.trim();
+            let colorPicker = document.getElementById('colorPicker').value;
+            let errorMessage = document.getElementById('errorMessage');
+            
+            if (colorText && !isValidColor(colorText)) {
+                errorMessage.style.display = 'block';
+                return;
+            }
+            
+            errorMessage.style.display = 'none';
+            let color = colorText || colorPicker || '#ffffff';
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
