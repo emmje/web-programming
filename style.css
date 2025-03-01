@@ -4,12 +4,26 @@ body {
     margin: 20px;
     line-height: 1.6;
     background-color: #fce4ec; /* Very light pink background */
+    color: #333; /* Dark text for readability */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2c2c2c; /* Dark grey background */
+    color: #e0e0e0; /* Light grey text */
 }
 
 /* Heading styles */
 h1, h2, h3, h4 {
-    color: #e91e63; /* Bright pink - your main color */
-    font-weight: bold;
+    color: #e91e63; /* Bright pink - main color */
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4 {
+    color: #ff80ab; /* Lighter pink for contrast */
 }
 
 h1 {
@@ -20,19 +34,31 @@ h1 {
 /* Paragraph styles */
 p {
     margin-bottom: 15px;
-    color: #616161; /* Darker gray for contrast */
+    color: #616161;
+}
+
+body.dark-mode p {
+    color: #bdbdbd; /* Light grey text */
 }
 
 /* Link styles */
 a {
-    color: #ec407a; /* Slightly darker pink */
+    color: #ec407a;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #d81b60; /* Even darker pink on hover */
+    color: #d81b60;
     text-decoration: underline;
+}
+
+body.dark-mode a {
+    color: #ff4081; /* Brighter pink */
+}
+
+body.dark-mode a:hover {
+    color: #f06292;
 }
 
 /* Unordered list styles */
@@ -55,6 +81,10 @@ li::before {
     top: 2px;
 }
 
+body.dark-mode li::before {
+    color: #ff80ab; /* Lighter pink heart for contrast */
+}
+
 /* Table styles */
 table {
     width: 100%;
@@ -64,15 +94,24 @@ table {
 }
 
 th, td {
-    border: 1px solid #f48fb1; /* Light pink border */
+    border: 1px solid #f48fb1;
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: #ffebee; /* Very light rose/pink background for headers */
+    background-color: #ffebee;
     font-weight: bold;
-    color: #e91e63; /* Bright pink header text */
+    color: #e91e63;
+}
+
+body.dark-mode th {
+    background-color: #424242; /* Dark grey */
+    color: #ff80ab;
+}
+
+body.dark-mode td {
+    border-color: #757575;
 }
 
 /* Image styles */
@@ -80,8 +119,13 @@ img {
     display: block;
     margin: 0 auto 50px;
     border-radius: 60%;
-    border: 4px solid #ec407a; /* Slightly darker pink border */
+    border: 4px solid #ec407a;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode img {
+    border-color: #ff4081;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Video styles */
@@ -92,9 +136,17 @@ video {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+body.dark-mode video {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
 /* Horizontal rule styles */
 hr {
     border: none;
-    border-top: 2px dashed #ec407a; /* Slightly darker pink dashed line */
+    border-top: 2px dashed #ec407a;
     margin: 30px 0;
+}
+
+body.dark-mode hr {
+    border-top-color: #ff80ab;
 }
